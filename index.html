@@ -290,40 +290,10 @@ a:hover { color: #ffd700; }
     opacity: 0.7;
 }
 
-/* هذا الكود سيتطبق فقط على أزرار التحميل النهائية في الهواتف */
-@media (max-width: 600px) {
-
-  /* استهداف الأزرار داخل الحاوية النهائية فقط */
-  .final-buttons a, 
-  .final-buttons a.btn-guide {
-    /* تكبير الحجم ليكون بارزاً */
-    font-size: 19px !important; 
-    padding: 16px 12px !important;
-    
-    /* منع شكل المربع والحفاظ على شكل المستطيل */
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    line-height: 1.2 !important; 
-    
-    /* طول احترافي موحد */
-    min-height: 65px; 
-    width: 100% !important;
-    border-radius: 15px !important;
-    margin: 15px 0 !important;
-  }
-
-  /* تكبير الحاوية السوداء المحيطة بهما قليلاً */
-  .final-buttons {
-    padding: 25px 15px !important;
-  }
-
-  /* --- أزرار الشروط (الخطوات 1-4) ستبقى بحجمها الطبيعي لكي لا تزدحم الشاشة --- */
-  .step {
-    font-size: 15px; /* حجم أصغر قليلاً للحفاظ على التناسق */
-    padding: 12px 15px;
-  }
+@media (max-width: 480px) {
+  .top-image-container { max-height: 35vh; }
+  h2 { font-size: 20px; }
+  .step { font-size: 15px; padding: 15px; }
 }
 
 /* popup نسخ الرابط */
