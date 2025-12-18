@@ -153,9 +153,8 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* خلفية حمراء داكنة فاخرة */
   background: linear-gradient(145deg, #660000, #3d0000);
-  border: 2px solid #c0a062; /* حدود ذهبية */
+  border: 2px solid #c0a062;
   border-radius: 18px;
   padding: 18px 20px;
   margin: 15px auto;
@@ -172,14 +171,26 @@ h2 {
 
 /* زخرفة بسيطة على الأزرار */
 .step::before {
-    content: '';
-    position: absolute;
-    top: 0; left: -50%;
-    width: 100%; height: 100%;
-    background: linear-gradient(to right, transparent, rgba(255,215,0,0.2), transparent);
-    transform: skewX(-25deg);
-    transition: 0.7s;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255,215,0,0.2), transparent);
+  transform: skewX(-25deg);
+  transition: 0.7s;
+  pointer-events: none; /* ✅ هنا السطر المهم */
 }
+
+/* ✅ إضافة هذا بعد الزخرفة مباشرة */
+.step a {
+  position: relative;
+  z-index: 2;
+}
+
+
+
 .step.active:hover::before { left: 100%; }
 
 .step.active { opacity: 1; pointer-events: auto; transform: translateY(0); }
